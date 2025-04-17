@@ -1,0 +1,21 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns:smartTable="sap.ui.comp.smarttable">
+    <Dialog id="_IDGenDialog1" title="{i18n>titleDialogCSV}" titleAlignment="Center">
+        <endButton>
+            <Button id="_IDGenButton" text="{i18n>btnClose}" type="Negative" press=".onCloseDialog" />
+        </endButton>
+        <beginButton>
+            <Button id="_IDGenButton1" type="Success" icon="sap-icon://upload" text="{i18n>btnUpload}" press=".onUploadData" />
+        </beginButton>
+        <VBox id="_IDGenVBox" justifyContent="Center" alignContent="Center" alignItems="Center">
+            <HBox id="_IDGenHBox" alignContent="Center" alignItems="Center" class="sapUiSmallMarginTop">
+                <u:FileUploader id="_IDGenFileUploader" icon="sap-icon://browse-folder" change="handleFiles" buttonText="{i18n>btnBrowse}" fileType="CSV" placeholder="{i18n>msgNonFileSelect}" />
+            </HBox>
+            <HBox id="_IDGenHBox1" alignContent="Center" alignItems="Center" class="sapUiSmallMarginTop sapUiSmallMarginBottom">
+                <Button id="_IDGenButton2" type="Neutral" icon="sap-icon://download" text="{i18n>btnDowloadTmpl}" press=".onDownloadTemplate" />
+            </HBox>
+            <HBox id="_IDGenHBox2">
+                <MessageStrip id="messageStripId" visible="false" text="{i18n>msgStrip}" type="Success" showIcon="true" class="sapUiSmallMarginBottom" />
+            </HBox>
+        </VBox>
+    </Dialog>
+</core:FragmentDefinition>
